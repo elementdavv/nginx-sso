@@ -37,44 +37,42 @@ git clone https://github.com/lakedai/nginx-sso.git
 cd nginx-sso && composer install
 ```
 
-3. Make sure nginx with php are configured correctly. Make sure web applications on nginx are working properly
+3. Make sure nginx with php are configured correctly. All web applications on nginx are working properly as well
 
 4. Create user database. For mysql server, using following script:
 
-  * vendor/delight-im/auth/Database/MySQL.sql
+  + vendor/delight-im/auth/Database/MySQL.sql
 
 5. Edit settings in src/config.php
 
-  * If email activation is enabled, make sure php mail() works properly
+  + If email activation is enabled, make sure php mail() works properly
 
 6. Edit settings in following files, __MAKE SURE__ the settings of api_scheme/api_host/api_port/inner_port are consistent
 
-  * config/api.conf
+  + config/api.conf
 
-  * config/conf.conf
+  + config/conf.conf
 
 ## Nginx Configurations
 1. Include __AT__ nginx's server level
 
-  * config/api.conf
+  + config/api.conf
 
 2. Include __INSIDE__ the server to be protected by SSO
 
-  * config/validate.conf
+  + config/validate.conf
 
-3. To protect the whole server or any location of the server
+3. (Optional) Include __INSIDE__ the server / location requiring login
 
-4. (Optional) Include __INSIDE__ the server or the location to be protected
+  + config/auth.conf
 
-  * config/auth.conf
+4. (Optional) Include __INSIDE__ the php block of the server / location requiring login
 
-5. (Optional) Include __INSIDE__ the php block of the server or the location to be protected
+  + config/id.conf
 
-  * config/id.conf
+5. (Optional) Refer to an config example
 
-6. (Optional) Refer to an config example
-
-  * config/default
+  + config/default
 
 ## PHP Configurations
 1. (Optional) Add email setting in php.ini
@@ -87,10 +85,10 @@ sendmail_path = "/usr/bin/msmtp -C /path/to/msmtprc -t"
 ## Web applications Setup
 Web applications needs do following:
 
-* Obtain the email value from HTTP header named HTTP_REMOTE_USER, login the user if not logined, and register new user if needed.
++ Obtain the email value from HTTP header named HTTP_REMOTE_USER, login the user if not logined, and register new user if needed.
 
-* Redirect to SSO login end point if no HTTP_REMOTE_USER HTTP header
++ Redirect to SSO login end point if no HTTP_REMOTE_USER HTTP header
 
-* Redirect logout link to SSO logout end point.
++ Redirect logout link to SSO logout end point.
 
-* (Optional) Disable any original user login/register/forgot password lifecycle.
++ (Optional) Disable any original user login/register/forgot password lifecycle.
