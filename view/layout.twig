@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R86CSKBR9P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R86CSKBR9P');
+</script>
+
+    <title>Single Sign On | Timelegend</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, shrink-to-fit=no">
+    <meta name="generator" content="Timelegend.net" />
+
+    <meta name="description" content="Timelegend Single Sign On Server" />
+    <meta name="keywords" content="时间传说 统一登录 SSO Single Sign On" />
+    <meta name="author" content="Ynez Dane" />
+    <meta property="og:title" content="Timelegend Single Sign On Server" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://api.timelegend.net/" />
+    <meta property="og:image" content="https://api.timelegend.net/images/2021-02-01_13-04.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@vinctai" />
+    <meta name="twitter:title" content="Timelegend Single Sign On Server" />
+    <meta name="twitter:description" content="Timelegend Single Sign On Server" />
+    <meta name="twitter.image" content="https://api.timelegend.net/images/2021-02-01_13-04.png" />
+
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/fontawesome-v5.2.0-all.css">
+    <link rel="stylesheet" href="css/theme-dark.css">
+    <script type="text/javascript" src="js/validator.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+  </head>
+  <body onload="init();">
+    <div class="float-container">
+      <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+      </a>
+    </div>
+  <div class="login-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-8 m-auto col-sm-8 col-12">
+				<div class="log-box">
+					<div class="row">
+						<div class="col-xl-6 col-sm-6 col-12 pad-right-0 logo">
+							<div class="logo-back">
+							</div>
+						</div>
+						<div class="col-xl-6 col-sm-6 col-12 pad-left-0 form">
+							<form name="form" method="post" action="{{ action }}">
+                                <div class='url'><a href='{{ domain_url }}'>{{ domain_name }}</a></div>
+{% block content %} {% endblock %}
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div style="height:150px;"></div>
+	</div>
+  </div>
+    <script type="text/javascript" src="js/theme.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+{% extends "./layout.twig" %}
+
+{% block content %}
+<div class="log-content">
+    <h1>SIGN UP</h1>
+    <div class="log-body">
+
+	<div class="form-group myr-top">
+	<label>Gmail</label>
+	<input name="email" type="text" class="form-control custom" placeholder="Email">
+	</div>
+
+	<div class="form-group myr-top">
+	<label>Password</label>
+	<input name="password" type="password" class="form-control custom" placeholder="Password">
+	</div>
+
+	<div class="form-group myr-top">
+	<label>Password repeat</label>
+	<input name="passwordrepeat" type="password" class="form-control custom" placeholder="Password repeat">
+	</div>
+
+	<div class="log-btn text-center">
+	<input type="submit" class="btn btn-theme1" value="Sign up">
+	</div>
+
+	<div class="log-btn">
+	<div class="error">{{ error | raw }}</div>
+	</div>
+
+	<div class="log-bottom-cotent log-bottom-cotent2">
+	<div style="float:right">
+	Have an account? <a href="login">Login</a>
+	</div>
+    	</div>
+
+    </div>
+</div>
+{% endblock %}

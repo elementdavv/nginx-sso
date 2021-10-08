@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/fontawesome-v5.2.0-all.css">
+    <link rel="stylesheet" href="css/theme-dark.css">
+</head>
+<body>
+    <div class="float-container">
+      <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true" style="padding-top: 5px;"></i>
+      </a>
+    </div>
+    <div class="aftr">
+        {{ response | raw}}
+        <br/>
+        <br/>
+        Return to <a href="http://timelegend.net">Timelegend.net</a>
+    </div>
+    <script type="text/javascript" src="js/theme.js"></script>
+</body>
+</html>

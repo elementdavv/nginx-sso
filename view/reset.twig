@@ -1,0 +1,31 @@
+{% extends "./layout.twig" %}
+
+{% block content %}
+<div class="log-content">
+    <h1>RESET</h1>
+    <div class="log-body">
+	
+	<div class="form-group myr-top">
+	<label>Email</label>
+	<input name="password" type="password" class="form-control custom" placeholder="Password">
+	</div>
+
+	<div class="form-group myr-top">
+	<label>Email</label>
+	<input name="passwordrepeat" type="password" class="form-control custom" placeholder="Password repeat">
+	</div>
+
+	<div class="log-btn text-center">
+	<input type="submit" class="btn btn-theme1" value="Reset">
+	</div>
+
+	<div class="log-btn">
+	<div class="error">{{ error | raw }}</div>
+	</div>
+
+	<div class="log-bottom-cotent log-bottom-cotent3">
+	</div>
+
+    </div>
+</div>
+{% endblock %}

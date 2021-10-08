@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<style type="text/css">
+div {
+padding:5px 15px;
+overflow:auto;
+font-size:16px;
+font-weight:400;
+line-height:24px;
+font-family:monospace;
+display:block;
+min-height:278px;
+}
+</style>
+</head>
+<body>
+    <div>Hi {{ email }}:
+    <p>
+    Seems like you forgot your descript password on Timelegend.net. <br/>
+    To reset it, just click the link below. <br/>
+    <p>
+    <a href="https://api.timelegend.net/reset?selector={{ selector }}&token={{ token }}" target="_blank">Reset Password</a>
+
+    <p>
+    <br/>
+Kind Regards, Timelegend.net
+</div>
+</body>

@@ -1,0 +1,22 @@
+{
+    "name": "lakedai/nginx-sso",
+    "description": "An nginx sso project.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lakedai",
+            "email": "vinctai@gmail.com"
+        }
+    ],
+    "require": {
+	    "delight-im/auth": "v8.2.2",
+        "bramus/router": "~1.5",
+        "twig/twig": "^3.0"
+    },
+    "autoload": {
+	    "psr-4": {
+	        "Lakedai\\Login\\": "src/"
+	    }
+    }
+}

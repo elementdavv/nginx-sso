@@ -1,0 +1,29 @@
+{% extends "./layout.twig" %}
+
+{% block content %}
+<div class="log-content">
+    <h1>FORGOT</h1>
+    <div class="log-body">
+
+	<div class="form-group myr-top">
+	<label>Email</label>
+	<input name="email" type="text" class="form-control custom" placeholder="Email">
+	</div>
+
+	<div class="log-btn text-center">
+	<input type="submit" class="btn btn-theme1" value="Fogot">
+	</div>
+
+	<div class="log-btn">
+	<div class="error">{{ error | raw }}</div>
+	</div>
+
+	<div class="log-bottom-cotent log-bottom-cotent3">
+	<div style="float:right">
+	Try again? <a href="login">Login</a>
+	</div>
+	</div>
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<style type="text/css">
+div {
+padding:5px 15px;
+overflow:auto;
+font-size:16px;
+font-weight:400;
+line-height:24px;
+font-family:monospace;
+display:block;
+min-height:278px;
+}
+</style>
+</head>
+<body>
+    <div>Hello {{ email }}:
+    <p>
+    You registered an account on Timelegend.net, before being able <br/>
+    to use your account you need to verify that this is your email <br/>
+    address by clicking below. <br/>
+    <p>
+    <a href="https://api.timelegend.net/verify?selector={{ selector }}&token={{ token }}" target="_blank">Verify Email</a>
+
+    <p>
+    <br/>
+Kind Regards, Timelegend.net
+</div>
+</body>

@@ -1,0 +1,28 @@
+{% extends "./layout.twig" %}
+
+{% block content %}
+<div class="log-content">
+    <h1>User Entrance</h1>
+    <div class="home">
+
+    <div style="display:{{ user }}">
+    <div class="form-group text-center">
+        <div>You have logged in as {{ email }}. To exit, click button.</div>
+    </div>
+	<div class="form-group log-btn text-center">
+        <a href="/logout" type="button" class="btn btn-theme1">EXIT</a>
+	</div>
+    </div>
+
+    <div style="display:{{ nouser }}">
+    <div class="form-group text-center">
+        <div>To join us, click the start button.</div>
+    </div>
+	<div class="form-group log-btn text-center">
+        <input type="button" class="btn btn-theme1" value="START" onclick="window.location='/login'">
+	</div>
+    </div>
+
+    </div>
+</div>
+{% endblock %}

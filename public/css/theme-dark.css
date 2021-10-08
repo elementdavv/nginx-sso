@@ -1,0 +1,53 @@
+/* theme: dark */
+body {
+    background-color: #212121;
+}
+.login-page{
+    background-color: #2a2a2a;
+}
+@media (min-width: 768px) {
+    .form {
+        background-color: #212121;
+    }
+}
+.log-content {
+    background-color: #212121;
+}
+.log-box {
+    box-shadow: none;
+}
+.url a, .log-content {
+    color: #dadada;
+}
+.url a:hover {
+    color: #aaa;
+}
+.btn-theme1 {
+    background-color: #212121;
+    color: #dadada;
+    border: 1px solid #dadada;
+}
+.btn-theme1:hover{
+	color:#212121;
+	background-color:#dadada;
+	border:1px solid transparent;
+	transition:ease 0.5s;
+}
+.custom {
+    color: #dadada;
+    border-bottom: 1px solid #dadada;
+}
+.custom:hover, .custom:focus{
+    color: #dadada;
+	border-bottom:1px solid darkred;
+}
+.log-bottom-cotent a {
+    color: #dadada;
+}
+.log-bottom-cotent a:hover {
+    color: #aaa;
+}
+.aftr {
+    color: #dadada;
+    background-color: #212121;
+}
