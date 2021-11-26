@@ -1,11 +1,11 @@
 {
-    "name": "lakedai/nginx-sso",
+    "name": "elementdavv/nginx-sso",
     "description": "An nginx sso project.",
     "type": "project",
     "license": "MIT",
     "authors": [
         {
-            "name": "lakedai",
+            "name": "elementdavv",
             "email": "vinctai@gmail.com"
         }
     ],

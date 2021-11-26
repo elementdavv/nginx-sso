@@ -29,7 +29,7 @@ On validating successful, the email of loggined user is set in HTTP header named
 ## SSO Server Setup
 1. Clone the repository
 ```
-git clone https://github.com/lakedai/nginx-sso.git
+git clone https://github.com/elementdavv/nginx-sso.git
 ```
 
 2. Install dependencies
