@@ -1,7 +1,7 @@
 <?php
 declare (strict_types = 1);
 
-namespace Lakedai\Login;
+namespace Elementdavv\Login;
 
 function config() {
 

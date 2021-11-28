@@ -1,7 +1,7 @@
 <?php
 declare (strict_types = 1);
 
-namespace Lakedai\Login;
+namespace Elementdavv\Login;
 
 require_once 'control/index.php';
 require_once 'control/signup.php';
@@ -17,7 +17,7 @@ class Routes {
     public function __construct() {
 
 	$this->router = new Router();
-	$this->router->setNamespace('\Lakedai\Login\Control');
+	$this->router->setNamespace('\Elementdavv\Login\Control');
 
 	$this->router->get('/about', function() {
 	    echo 'about ';

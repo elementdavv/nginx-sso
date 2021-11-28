@@ -1,7 +1,7 @@
 <?php
 declare (strict_types = 1);
 
-namespace Lakedai\Login\Utils;
+namespace Elementdavv\Login\Utils;
 
 /* validate, sanitize and return input */
 class Form{
@@ -10,7 +10,7 @@ class Form{
     const PASSWORD_MAX = 12;
 
     public static function text($input, $title) : string {
-	
+
 	$input = self::check_empty($input, $title);
 
 	$input = filter_var($input, FILTER_SANITIZE_STRING);
@@ -20,7 +20,7 @@ class Form{
     }
 
     public static function email($input) : string {
-	
+
 	$input = self::check_empty($input, 'Email');
 
 	$input = filter_var($input, FILTER_SANITIZE_EMAIL);
@@ -36,9 +36,9 @@ class Form{
     public static function password($input) : string {
 
 	$input = self::check_empty($input, 'Password');
-	
+
 	$input = filter_var($input, FILTER_SANITIZE_STRING);
-	
+
 	if (strlen($input) < self::PASSWORD_MIN || strlen($input) > self::PASSWORD_MAX) {
 	    throw new \Exception('Password length should be between ' . self::PASSWORD_MIN . ' and ' . self::PASSWORD_MAX);
 	}
@@ -53,10 +53,10 @@ class Form{
 
 	$input = filter_var($input, FILTER_SANITIZE_STRING);
 	$input2 = filter_var($input2, FILTER_SANITIZE_STRING);
-	
+
 	if (strcmp($input, $input2) != 0) {
 	    throw new \Exception('Passwords must match');
-	}	    
+	}
 	else if (strlen($input) < self::PASSWORD_MIN || strlen($input) > self::PASSWORD_MAX) {
 	    throw new \Exception('Password length should be between ' . self::PASSWORD_MIN . ' and ' . self::PASSWORD_MAX);
 	}

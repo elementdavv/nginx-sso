@@ -1,7 +1,7 @@
 <?php
 declare (strict_types = 1);
 
-namespace Lakedai\Login\Control;
+namespace Elementdavv\Login\Control;
 
 require_once 'base.php';
 
@@ -25,7 +25,7 @@ class Index extends Base {
             "domain_name" => $this->config['domain_name'],
             "email" => $email ?: '',
 	        "user" => $user,
-	        "nouser" => $nouser 
+	        "nouser" => $nouser
         ]);
 
     }

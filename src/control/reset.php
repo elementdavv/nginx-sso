@@ -1,11 +1,11 @@
 <?php
 declare (strict_types = 1);
 
-namespace Lakedai\Login\Control;
+namespace Elementdavv\Login\Control;
 
 require_once 'base.php';
 
-use Lakedai\Login\Utils\Form;
+use Elementdavv\Login\Utils\Form;
 
 class Reset extends Base {
 
@@ -35,7 +35,7 @@ class Reset extends Base {
                 $header .= "Content-Type: text/html; charset=UTF-8\r\n";
 		mail($email, $subject, $message, $header);
 	    });
-        
+
             $error = "Password reset link has been sent to your email. Please click it to continue.";
             echo $this->twig->render('after.twig',[
 	    	"response" => $error

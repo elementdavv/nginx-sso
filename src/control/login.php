@@ -1,11 +1,11 @@
 <?php
 declare (strict_types = 1);
 
-namespace Lakedai\Login\Control;
+namespace Elementdavv\Login\Control;
 
 require_once 'base.php';
 
-use Lakedai\Login\Utils\Form;
+use Elementdavv\Login\Utils\Form;
 
 class Login extends Base {
 
@@ -58,7 +58,7 @@ class Login extends Base {
 	// error_log("uri:" . $_SERVER['HTTP_X_ORIGINAL_URI'] . "\n", 3, '/home/legend/tmp/log.log');
 	if ($this->auth->check()) {
 	    header('HTTP/1.1 200 OK');
-            // follow RFC 3875	
+            // follow RFC 3875
 	    header('REMOTE_USER: ' . $this->auth->getEmail());
 	}
 	else {

@@ -1,11 +1,11 @@
 <?php
 declare (strict_types = 1);
 
-namespace Lakedai\Login\Control;
+namespace Elementdavv\Login\Control;
 
 require_once 'base.php';
 
-use Lakedai\Login\Utils\Form;
+use Elementdavv\Login\Utils\Form;
 
 class Signup extends Base {
 
@@ -21,7 +21,7 @@ class Signup extends Base {
     }
 
     public function signup() {
-	
+
 	try {
 	    $email = Form::email($_POST['email']);
 	    $password = Form::matchPassword($_POST['password'], $_POST['passwordrepeat']);
@@ -49,7 +49,7 @@ class Signup extends Base {
 	    	$error = "Sign up successful! Please login.";
 	    	header('Location: login?' . 'error=' . $error);
 	    }
- 
+
 	    return;
 	}
 	catch (\Delight\Auth\InvalidEmailException $e) {
